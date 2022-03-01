@@ -9,6 +9,17 @@ namespace Linked_List_Problem
     internal class Linked_List
     {
         public Node head;
+        public void Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Empty linked list");
+            }
+            else
+            {
+                head = head.next;
+            }
+        }
 
         //To Creating elements to the list
         public void CreatingElements(int value)
