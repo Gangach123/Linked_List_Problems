@@ -47,18 +47,14 @@ namespace Linked_List_Problem
                 Console.WriteLine($"{temp.data}");
             }
         }
-        public void AppendingElements(int data)
+        //Adding between two nodes.Works for only three elements in linked list.
+        public void AddingElementBetweenNodes(int data)
         {
             Node newNode = new Node(data);
-            if (head == null)
-            {
-                Console.WriteLine("Linked list is empty");
-            }
-            else
-            {
-                newNode.next = head;
-                head = newNode;
-            }
+            Node temp = head;
+            temp = temp.next;
+            newNode.next = temp;
+            head.next = newNode;
         }
     }
 }
