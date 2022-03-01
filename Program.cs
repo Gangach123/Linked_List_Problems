@@ -7,9 +7,9 @@ namespace Linked_List_Problem
         {
             Console.WriteLine("Welcome to Linked_List_Problems");
             Linked_List linked_List = new Linked_List();
-            linked_List.CreatingElements(56);
-            linked_List.CreatingElements(30);
             linked_List.CreatingElements(70);
+            linked_List.InsertingElements(30);
+            linked_List.InsertingElements(56);
             linked_List.DisplayLinkedList();
         }
     }
