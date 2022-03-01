@@ -9,6 +9,30 @@ namespace Linked_List_Problem
     internal class Linked_List
     {
         public Node head;
+        //Inserting Node after a given node.
+        public void InsertNodeAfterDefiningNode(int data, int definedNode)
+        {
+            Node newNode = new Node(data);
+            if (head == null)
+            {
+                Console.WriteLine("Empty linked list");
+            }
+            else
+            {
+                Node temp = head;
+                Node prev = head;
+                while (temp != null)
+                {
+                    if (temp.data == definedNode)
+                    {
+                        newNode.next = temp.next;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                temp.next = newNode;
+            }
+        }
         public void SearchingForNode(int data)
         {
             if (head == null)

@@ -10,8 +10,8 @@ namespace Linked_List_Problem
             linked_List.CreatingElements(56);
             linked_List.CreatingElements(30);
             linked_List.CreatingElements(70);
-            //Searhing for the Node
-            linked_List.SearchingForNode(56);
+            //Inserting Node after a defined Node
+            linked_List.InsertNodeAfterDefiningNode(40, 30);
             linked_List.DisplayLinkedList();
         }
     }
