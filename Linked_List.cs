@@ -47,7 +47,7 @@ namespace Linked_List_Problem
                 Console.WriteLine($"{temp.data}");
             }
         }
-        public void InsertingElements(int data)
+        public void AppendingElements(int data)
         {
             Node newNode = new Node(data);
             if (head == null)
