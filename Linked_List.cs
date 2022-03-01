@@ -9,6 +9,33 @@ namespace Linked_List_Problem
     internal class Linked_List
     {
         public Node head;
+        public void SearchingForNode(int data)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Empty linked list");
+            }
+            else
+            {
+                Node temp = head;
+                int positionOfSearchedNode = 0;
+                while (temp != null)
+                {
+                    positionOfSearchedNode++;
+                    if (temp.data == data)
+                    {
+                        Console.WriteLine($"Your {data} node is found at {positionOfSearchedNode} position.");
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                if (temp == null)
+                {
+                    Console.WriteLine($"Specified {data} node is not present in the linked list.");
+                }
+            }
+
+        }
         //To remove last node in linkedlist
         public void LastElement()
         {

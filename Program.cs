@@ -10,8 +10,8 @@ namespace Linked_List_Problem
             linked_List.CreatingElements(56);
             linked_List.CreatingElements(30);
             linked_List.CreatingElements(70);
-            Console.WriteLine("Last element was deleted from list.");
-            linked_List.LastElement();
+            //Searhing for the Node
+            linked_List.SearchingForNode(56);
             linked_List.DisplayLinkedList();
         }
     }
