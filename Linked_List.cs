@@ -9,6 +9,26 @@ namespace Linked_List_Problem
     internal class Linked_List
     {
         public Node head;
+        //To remove last node in linkedlist
+        public void LastElement()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Empty linked list");
+            }
+            else
+            {
+                Node temp = head;
+                Node prev = head;
+                while (temp.next != null)
+                {
+                    prev = temp;
+                    temp = temp.next;
+                }
+                prev.next = null;
+            }
+        }
+        //To delete first emelent in the list.
         public void Pop()
         {
             if (head == null)
