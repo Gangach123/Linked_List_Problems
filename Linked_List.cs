@@ -9,46 +9,24 @@ namespace Linked_List_Problem
     internal class Linked_List
     {
         public Node head;
-        //Deleting a given node from the list
-        public void DeletingGivenNode(int deletingNode)
+        public void SortedLink()
         {
-            if (head == null)
+            Node prev = head;
+            int nodeData;
+            while (prev != null)
             {
-                Console.WriteLine("Empty linked list");
-            }
-            else
-            {
-                Node temp = head;
-                Node prev = head;
+                Node temp = prev;
                 while (temp != null)
                 {
-                    if (temp.data == deletingNode)
+                    if (prev.data.CompareTo(temp.data) > 0)
                     {
-                        break;
+                        nodeData = prev.data;
+                        prev.data = temp.data;
+                        temp.data = nodeData;
                     }
-                    prev = temp;
                     temp = temp.next;
                 }
-                prev.next = temp.next;
-            }
-        }
-        //For getting size of linked list !
-        public void SizeOfLinkedList()
-        {
-            int size = 0;
-            if (head == null)
-            {
-                Console.WriteLine("Linked listis empty.");
-            }
-            else
-            {
-                Node temp = head;
-                while (temp != null)
-                {
-                    size++;
-                    temp = temp.next;
-                }
-                Console.WriteLine("The size of the linked list is " + size);
+                prev = prev.next;
             }
         }
         //Inserting Node after a given node.

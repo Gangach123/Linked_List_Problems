@@ -9,15 +9,11 @@ namespace Linked_List_Problem
             Linked_List linked_List = new Linked_List();
             linked_List.CreatingElements(56);
             linked_List.CreatingElements(30);
+            linked_List.CreatingElements(40);
             linked_List.CreatingElements(70);
-            //Inserting Node after a defined Node
-            linked_List.InsertNodeAfterDefiningNode(40, 30);
 
-            //Deleting Node at given node list.
-            linked_List.DeletingGivenNode(40);
-
-            //For getting the size of linked list
-            linked_List.SizeOfLinkedList();
+            //Calling SortList method
+            linked_List.SortedLink();
             linked_List.DisplayLinkedList();
         }
     }
